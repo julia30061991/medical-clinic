@@ -1,9 +1,6 @@
 package com.medical.clinic.model;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.UUID;
@@ -11,7 +8,7 @@ import java.util.UUID;
 @Entity
 @Getter (value = AccessLevel.PUBLIC)
 @Setter (value = AccessLevel.PUBLIC)
-//@NoArgsConstructor
+@NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "doctors")
 public class Doctor {

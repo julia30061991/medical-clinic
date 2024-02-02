@@ -53,7 +53,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.4.11.Final</version>
+            <!--<version>5.4.12.Final</version>-->
         </dependency>
 
         <!-- LOMBOK FOR ANNOTATION -->
@@ -63,25 +63,24 @@
             <version>1.18.12</version>
         </dependency>
 
-        <!-- JPA FOR REPOSITORY -->
-        <!--<dependency>-->
-        <!--<groupId>org.springframework.boot</groupId>-->
-        <!--<artifactId>spring-boot-starter-data-jpa</artifactId>-->
-        <!--</dependency>-->
+        <!--JPA FOR REPOSITORY-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
 
-        <!-- POSTGRESQL -->
-        <!--<dependency>-->
-        <!--<groupId>org.postgresql</groupId>-->
-        <!--<artifactId>postgresql</artifactId>-->
-        <!--<scope>runtime</scope>-->
-        <!--</dependency>-->
+        <!--POSTGRESQL-->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
 
-        <!-- POSTGRESQL JDBC -->
-
-        <!--<dependency>-->
-        <!--<groupId>org.springframework.boot</groupId>-->
-        <!--<artifactId>spring-boot-starter-data-jdbc</artifactId>-->
-        <!--</dependency>-->
+        <!--POSTGRESQL JDBC-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jdbc</artifactId>
+        </dependency>
 
     </dependencies>
 </project>

@@ -1,6 +1,9 @@
 package com.medical.clinic.service;
 
+import com.medical.clinic.model.AdmissionTicket;
 import com.medical.clinic.model.ClinicTimetable;
+import com.medical.clinic.repository.AdmissionTicketRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
@@ -18,29 +21,9 @@ import java.time.LocalTime;
 @WebService(serviceName = "ClinicTimetable")
 public class TimetableWebService {
 
-    @WebMethod(operationName = "timetable")
-    public ClinicTimetable getTimeTable() throws DatatypeConfigurationException {
-        ClinicTimetable timetable = new ClinicTimetable();
-        timetable.setDate(convertDateToXMLGCalendar(LocalDate.now()));
-        timetable.setStart(convertTimeToXMLGCalendar(LocalTime.of(8,0)));
-        timetable.setEnd(convertTimeToXMLGCalendar(LocalTime.of(18,0)));
-        timetable.setTicketCount(10);
-        return timetable;
+//    @WebMethod(operationName = "timetable")
+//    public ClinicTimetable getTimeTable() throws DatatypeConfigurationException {
+//        TimetableCreateService service = new TimetableCreateService();
 //        return service.createTimetable();
     }
-
-    private XMLGregorianCalendar convertDateToXMLGCalendar(LocalDate date) throws DatatypeConfigurationException {
-        XMLGregorianCalendar newDate = DatatypeFactory.newInstance().newXMLGregorianCalendar();
-        newDate.setYear(date.getYear());
-        newDate.setMonth(date.getMonthValue());
-        newDate.setDay(date.getDayOfMonth());
-        return newDate;
-    }
-
-    private XMLGregorianCalendar convertTimeToXMLGCalendar(LocalTime time) throws DatatypeConfigurationException {
-        int timezone = 0; //узнать таймзону
-        XMLGregorianCalendar XMLTime = DatatypeFactory.newInstance()
-                .newXMLGregorianCalendarTime(time.getHour(), time.getMinute(), time.getSecond(), timezone);
-        return XMLTime;
-    }
-}
+//}
