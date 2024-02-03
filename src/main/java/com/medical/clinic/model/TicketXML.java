@@ -6,16 +6,16 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.xml.datatype.XMLGregorianCalendar;
-import java.util.List;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ClinicTimetable {
-    private XMLGregorianCalendar start;
-    private XMLGregorianCalendar end;
+public class TicketXML {
+    private Integer id;
+    private Integer doctorID;
+    private Integer patientID;
     private XMLGregorianCalendar date;
-    private Integer ticketCount;
-    private List<TicketXML> tickets;
+    private XMLGregorianCalendar timeStart;
+    private Boolean reserve;
 }
