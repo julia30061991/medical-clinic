@@ -5,11 +5,6 @@ import com.medical.clinic.repository.AdmissionTicketRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import javax.jws.WebMethod;
 
-/**
- * SOAP Service.
- * Go to http://localhost:8080/timetable?wsdl to get .wsdl file
- */
-
 public class TimetableWebService {
 
     @Autowired
